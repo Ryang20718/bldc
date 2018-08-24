@@ -49,7 +49,7 @@ void packet_send_packet(unsigned char *data, unsigned int len, int handler_num) 
 
 	int b_ind = 0;
 
-	if (len <= 256) {
+	if (len <= 512) {
 		handler_states[handler_num].tx_buffer[b_ind++] = 2;
 		handler_states[handler_num].tx_buffer[b_ind++] = len;
 	} else {
